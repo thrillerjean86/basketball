@@ -58,9 +58,9 @@ st.markdown(filedownload(df_selected_team), unsafe_allow_html=True)
 #Heatmap
 if st.button('Intercorrelation Heatmap'):
     st.header('Intercorrelation Matrix Heatmap')
-    df_selected_team.to_csv('output.csv',index=False)
-    df = pd.read_csv('output.csv')
-    numeric_df = df.select_dtypes(include=[np.number])
+    # df_selected_team.to_csv('output.csv',index=False)
+    # df = pd.read_csv('output.csv')
+    numeric_df = df_selected_team.select_dtypes(include=[np.number])
 
     # Calculate the correlation matrix
     corr = numeric_df.corr()
